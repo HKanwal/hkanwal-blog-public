@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.0.3"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://blog.hkanwal.com/blog/saylor-schiff-ratio/"><!-- Primary Meta Tags --><title>Saylor-Schiff Indicator</title><meta name="title" content="Saylor-Schiff Indicator"><meta name="description" content="A Bitcoin indicator useful for timing trades."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://blog.hkanwal.com/blog/saylor-schiff-ratio/"><meta property="og:title" content="Saylor-Schiff Indicator"><meta property="og:description" content="A Bitcoin indicator useful for timing trades."><meta property="og:image" content="https://blog.hkanwal.com/saylor-schiff-ratio/Hero-Image.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://blog.hkanwal.com/blog/saylor-schiff-ratio/"><meta property="twitter:title" content="Saylor-Schiff Indicator"><meta property="twitter:description" content="A Bitcoin indicator useful for timing trades."><meta property="twitter:image" content="https://blog.hkanwal.com/saylor-schiff-ratio/Hero-Image.png"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media (max-width: 720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] span[data-astro-cid-3ef6ksr2]{opacity:0}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:center}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media (max-width: 720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+[data-astro-image]{width:100%;height:auto;object-fit:var(--fit);object-position:var(--pos);aspect-ratio:var(--w) / var(--h)}[data-astro-image=responsive]{max-width:calc(var(--w) * 1px);max-height:calc(var(--h) * 1px)}[data-astro-image=fixed]{width:calc(var(--w) * 1px);height:calc(var(--h) * 1px)}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <!-- <h2>
+      <span>{SITE_TITLE}</span>
+    </h2> --> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Blog </a>  <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <!-- <div class='social-links'>
+      <a href='https://m.webtoo.ls/@astro' target='_blank'>
+        <span class='sr-only'>Follow Astro on Mastodon</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://twitter.com/astrodotbuild' target='_blank'>
+        <span class='sr-only'>Follow Astro on Twitter</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://github.com/withastro/astro' target='_blank'>
+        <span class='sr-only'>Go to Astro's GitHub repo</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+          ></path></svg
+        >
+      </a>
+    </div> --> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo> <img width="1020" height="510" src="/saylor-schiff-ratio/Hero-Image.png" alt="" data-astro-cid-bvzihdzo> </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2025-09-30T04:00:00.000Z"> Sep 30, 2025 </time>  </div> <h1 data-astro-cid-bvzihdzo>Saylor-Schiff Indicator</h1> <hr data-astro-cid-bvzihdzo> </div>  <p>This article details a Bitcoin indicator that compares the performance of Bitcoin relative to Gold, humorously dubbed the Saylor-Schiff indicator. Don’t let the name fool you though — it has a solid track record and can be useful for timing trades.</p>
+<h4 id="background">Background</h4>
+<p>On the risk spectrum, Bitcoin and Gold occupy opposite extremes. At one end, Bitcoin is considered high risk due to its high volatility and speculative nature. At the other end, Gold is considered low risk due to its low volatility and safe-haven nature. By comparing the relative performance of these two seemingly contradictory asset classes, a valuable indicator can be developed — one that serves as a barometer for whether the market is in a risk-on or risk-off regime.</p>
+<p>The rationale is simple. When Bitcoin is outperforming Gold, it indicates that the market is in a risk-on regime because investors are flocking to the riskier asset. Conversely, when Gold is outperforming Bitcoin, it indicates that the market is in a risk-off regime because investors are reaching for safety.</p>
+<p>Why is this useful to know? Because it can help dictate when to allocate offensively and when to allocate defensively. Risk-on regimes tend to be the best times to hold riskier positions, such as Bitcoin and high beta equities. In risk-off regimes on the other hand, it may be prudent to minimize risk because these periods are when the largest drawdowns can occur.</p>
+<h4 id="indicator-construction--interpretation">Indicator Construction &#x26; Interpretation</h4>
+<p>Given it’s potential insightfulness, let’s learn how to construct such an indicator in a two-step process that should be easy to implement in any modern charting software.</p>
+<p>First, take the ratio between Bitcoin and Gold on the weekly timeframe (where one candle represents one week). Then, calculate the 4-week rate of change (ROC) of this ratio. Here is the result plotted under the price of Bitcoin:</p>
+<p><a href="/saylor-schiff-ratio/saylor-shiff-ratio-chart.PNG"><img src="/saylor-schiff-ratio/saylor-shiff-ratio-chart.PNG" alt=""></a>
+Saylor-Schiff indicator</p>
+<p>Upon visual inspection, it can be noticed that periods where the ROC is above 0 tend to coincide with significant upwards price movements, whereas periods where the ROC is below 0 tend to coincide with consolidations and/or pullbacks in price.</p>
+<p>This makes sense because positive ROC readings correspond to periods where Bitcoin was outperforming Gold (the Bitcoin-to-Gold ratio was increasing), whereas negative readings correspond to periods where Gold was outperforming Bitcoin (the Bitcoin-to-Gold ratio was decreasing).</p>
+<p>Notably, the indicator crossing up through 0 tends to precede rises in price.</p>
+<h4 id="strategy">Strategy</h4>
+<p>Based on its relationship to the price of Bitcoin, the above constructed Saylor-Schiff indicator can be used to develop a deterministic Bitcoin trading strategy. The rules for buying and selling are as follows.</p>
+<p>A buy signal occurs when the ROC crosses up through 0. When this happens, a buy stop order is placed above that weekly candle high. If the following weekly candle prints a lower high without the ROC crossing back down through 0, the stop price is updated to the high of the new weekly candle. If a position is not entered by the time the ROC crosses back down through 0, the buy signal is invalidated and the order is cancelled. If price does reach the entry point and the order is filled, a sell signal is awaited.</p>
+<p>A sell signal occurs when the ROC crosses down through 0. When this happens, a sell stop order is placed below that weekly candle low. If price does not hit this stop loss and the next weekly candle prints a higher low, the stop price is updated to the low of the new weekly candle. Any buy signal received during this time is invalid because a position is already being held. If price hits the stop loss and the order is filled, a new buy signal is awaited.</p>
+<h4 id="backtesting">Backtesting</h4>
+<p>Given its deterministic nature, it is straightforward to develop backtests for the strategy described above.</p>
+<p>First, here is a visualization of when buy and sell orders would have been filled according to the strategy’s rules over the past six years (log scale):</p>
+<p><a href="/saylor-schiff-ratio/log-scale-buys-and-sells.png"><img src="/saylor-schiff-ratio/log-scale-buys-and-sells.png" alt=""></a></p>
+<p>Highlighted using red arrows are major drawdowns, including multiple -50% corrections, that the Saylor-Schiff strategy avoided. Despite selective exposure, the strategy still delivered a return of 873.78% compared to a buy-and-hold return of 1251.29% over the same period. This suggests that using the Saylor-Schiff indicator limits risk at the cost of some alpha.</p>
+<p>While Bitcoin bulls are likely to find this strategy inferior to buying and holding for the long term, the limited risk may be appealing to traders that are skeptical of Bitcoin but still want to participate in its shorter-term rallies, or for traders that feel unable to weather the worst of Bitcoin’s volatility.</p>
+<p>To illustrate the reduced volatility of the Saylor-Schiff strategy, here is its performance over the last four years compared to that of buying and holding Bitcoin if both started with $10,000:</p>
+<p><a href="/saylor-schiff-ratio/performance-comparison.png"><img src="/saylor-schiff-ratio/performance-comparison.png" alt=""></a></p>
+<p>It can be observed that the Saylor-Schiff strategy suffered less drastic drawdowns during the 2022 bear market at the cost of reduced participation in later rallies.</p>
+<p>Another notable benefit is that capital is infrequently utilized, and so incurs decreased opportunity cost as compared to buying and holding. Where the Saylor-Schiff historical performance graph flatlines, capital is out of Bitcoin and available to use for other trades. This can be preferrable for successful swing traders who are able to generate returns elsewhere while Bitcoin consolidates.</p>
+<p>As a quantitative example, in approximately the last four years the Saylor-Schiff strategy managed to generate returns of 73.87% versus Bitcoin’s 153.05% while only holding a position 42% of the time for a total hold time of 87 out of 209 weeks.</p>
+<h4 id="summary">Summary</h4>
+<p>In summary, the Saylor-Schiff indicator provides insight into market risk regimes by comparing the performance of Bitcoin (a highly speculative asset) to that Gold (a safe-haven asset). For Bitcoin traders, it can provide timely buy and sell signals that capture much of the upside while significantly limiting risk.</p>
+<p>Though such a strategy will likely underperform buying and holding in the long run, its comparative safety and its infrequent capital utlilization rate may be appealing to some traders.</p>
+<h4 id="sources">Sources</h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=zuG9Tjnud9k">https://www.youtube.com/watch?v=zuG9Tjnud9k</a></li>
+<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2604248">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2604248</a></li>
+</ul>
+<style>
+img:hover {
+  cursor: zoom-in;
+}
+
+div.hero-image img {
+  cursor: auto;
+}
+
+/* Center videos and images. */
+/* Also conveniently centers captions. */
+p:has(> video), p:has(> img), p:has(> a) {
+  text-align: center;
+}
+</style>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+I am not a professional in any of the topics I cover. Do your own research. I am not liable for any decisions you may
+  make (financial, medical, etc). Blog template by @astrodotbuild.
+<!-- <div class='social-links'>
+    <a href='https://m.webtoo.ls/@astro' target='_blank'>
+      <span class='sr-only'>Follow Astro on Mastodon</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/mastodon'
+        ><path
+          fill='currentColor'
+          d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'
+        ></path></svg
+      >
+    </a>
+    <a href='https://twitter.com/astrodotbuild' target='_blank'>
+      <span class='sr-only'>Follow Astro on Twitter</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/twitter'
+        ><path
+          fill='currentColor'
+          d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z'
+        ></path></svg
+      >
+    </a>
+    <a href='https://github.com/withastro/astro' target='_blank'>
+      <span class='sr-only'>Go to Astro's GitHub repo</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/github'
+        ><path
+          fill='currentColor'
+          d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+        ></path></svg
+      >
+    </a>
+  </div> --> </footer>  </body></html>

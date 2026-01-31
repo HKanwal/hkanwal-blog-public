@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.0.3"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://blog.hkanwal.com/blog/gamma-flip-line/"><!-- Primary Meta Tags --><title>Gamma Flip Line</title><meta name="title" content="Gamma Flip Line"><meta name="description" content="Explaining the gamma flip line and providing open-source code to calculate it."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://blog.hkanwal.com/blog/gamma-flip-line/"><meta property="og:title" content="Gamma Flip Line"><meta property="og:description" content="Explaining the gamma flip line and providing open-source code to calculate it."><meta property="og:image" content="https://blog.hkanwal.com/gamma-flip-line/Hero-Image-2.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://blog.hkanwal.com/blog/gamma-flip-line/"><meta property="twitter:title" content="Gamma Flip Line"><meta property="twitter:description" content="Explaining the gamma flip line and providing open-source code to calculate it."><meta property="twitter:image" content="https://blog.hkanwal.com/gamma-flip-line/Hero-Image-2.png"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media (max-width: 720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] span[data-astro-cid-3ef6ksr2]{opacity:0}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:center}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media (max-width: 720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+[data-astro-image]{width:100%;height:auto;object-fit:var(--fit);object-position:var(--pos);aspect-ratio:var(--w) / var(--h)}[data-astro-image=responsive]{max-width:calc(var(--w) * 1px);max-height:calc(var(--h) * 1px)}[data-astro-image=fixed]{width:calc(var(--w) * 1px);height:calc(var(--h) * 1px)}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <!-- <h2>
+      <span>{SITE_TITLE}</span>
+    </h2> --> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Blog </a>  <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <!-- <div class='social-links'>
+      <a href='https://m.webtoo.ls/@astro' target='_blank'>
+        <span class='sr-only'>Follow Astro on Mastodon</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://twitter.com/astrodotbuild' target='_blank'>
+        <span class='sr-only'>Follow Astro on Twitter</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://github.com/withastro/astro' target='_blank'>
+        <span class='sr-only'>Go to Astro's GitHub repo</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+          ></path></svg
+        >
+      </a>
+    </div> --> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo> <img width="1020" height="510" src="/gamma-flip-line/Hero-Image-2.png" alt="" data-astro-cid-bvzihdzo> </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2025-06-23T04:00:00.000Z"> Jun 23, 2025 </time>  </div> <h1 data-astro-cid-bvzihdzo>Gamma Flip Line</h1> <hr data-astro-cid-bvzihdzo> </div>  <p>The gamma flip line is a leading indicator that can warn traders of potential market crashes by reliably predicting the periods of high volatility that accompany them. For instance, traders paying attention to it could have avoided the tariff induced crash of early 2025. To make use of its predictive capabilities, let’s derive our own using Python. In the process, we will learn what the gamma flip line represents and why it works.</p>
+<h4 id="market-makers">Market Makers</h4>
+<p>When financial instruments are traded, there exists a gap between the bid price (the maximum price buyers are willing to pay) and the ask price (the minimum price sellers are willing to recieve). This gap is called the bid-ask spread.</p>
+<p>Market makers are market participants that monetize this spread by simultaneously and continuously buying at the bid (quoting a bid price) and selling at the ask (quoting an ask price). They are liquidity providers that are always ready to take the opposite side of trades that cross the spread.</p>
+<p>To avoid directional risk and ensure their returns are market neutral, market makers maintain an overall position that is delta neutral. They do so by hedging their option positions with a position in the underlying. As their option delta changes, to maintain a net delta that is continuously zero, their hedge is adjusted dynamically. The amount their option delta changes for each $1 change in the price of the underlying is called their net gamma.</p>
+<p><em>Note: For indices, market makers are unable to hedge using the underlying directly. Instead, they use highly correlated instruments like ETFs, futures, and baskets of constituent stocks.</em></p>
+<p>Market maker hedging behaviour varies drastically depending on the sign of their net gamma. When they have a positive net gamma, market makers act as a stabilizing force, decreasing volatility by buying when the underlying price goes down, and selling when it goes up. When they have a negative net gamma, however, they act as a destabilizing force, increasing volatility by selling when the underlying price goes down, and buying when it goes up.</p>
+<p>By estimating market maker net gamma and identifying when it <em>flips</em> from positive to negative, traders can receive a warning signal for shifting market conditions and turbulent times ahead.</p>
+<h4 id="estimating-net-gamma">Estimating Net Gamma</h4>
+<p>Long options have positive gamma, and short options have negative gamma. Market maker net gamma is calculated as the sum of the gammas of their long and short options. Thus, the calculation requires these two pieces of information per option: positioning and gamma. For example, a position of 1 long option with a gamma of 0.1, plus a position of 2 long option with a gamma of 0.2, plus a position of 1 short option with a gamma of -0.05 would result in a net gamma of 0.45.</p>
+<p>The total of an option’s outstanding contracts is called its open interest. Unfortunately, only open interest is publicly disclosed, and not how much of it market makers are short or long. Since we can not know exact market maker positioning, it is impossible to calculate their exact net gamma. Without proprietary knowledge, their net gamma can only be estimated by making positioning assumptions.</p>
+<p>One commonly made assumption is that market makers are short 100% of put open interest and long 100% of call open interest. It is justified by the observation that traders tend to buy puts as a hedge against market downturns, and sell calls as a source of additional profit.</p>
+<p>Using this assumption, the need for market maker positioning is replaced by a need for open interest data, which, fortunately, is readily available through any of the common brokers. Deriving individual gammas, however, will take more effort.</p>
+<p>The Black-Scholes option pricing model describes an option’s gamma as a function of 5 parameters: risk-free rate, strike, days to expiry, implied volatility (IV), and underlying price. Though these can all be easily obtained through a broker, the model implementation must be done ourselves, and a gamma calculation must be performed for each option.</p>
+<p>Having obtained the required positioning and gamma data, an estimate for net gamma can finally be derived by multiplying each option’s calculated gamma by its open interest, then adding the products together.</p>
+<h4 id="gex-curve">GEX Curve</h4>
+<p>Of the Black-Scholes parameters, three are option specific: strike, days to expiry, and IV. The other two, risk-free rate and underlying price, are not option specific, and should be kept constant per net gamma calculation. Therefore, net gamma is a function of only these two parameters.</p>
+<p>By varying underlying price, we can find the inflection point at which net gamma changes signs. This gamma flip price, aka gamma flip line, represents the function’s zero. Programmatically, it can be found using Newton’s method, an iterative root finding algorithm.</p>
+<p>To visualize net gamma, let’s plot it versus underlying price. The resulting graph is called the GEX (Gamma EXposure) curve:</p>
+<p><a href="/gamma-flip-line/python-gex-curve.png"><img src="/gamma-flip-line/python-gex-curve.png" alt=""></a></p>
+<p>To minimize runtime, this curve was computed using a subset of all SPX options, constrained by expiration and strike range.</p>
+<p><em>Note: SpotGamma provides a GEX curve that, at the expensive of the flip line being difficult to discern, is free and can be viewed at any time here: <a href="https://spotgamma.com/free-tools/spx-gamma-exposure/">https://spotgamma.com/free-tools/spx-gamma-exposure/</a></em></p>
+<p>What is SPX? SPX is an index that tracks the performance of the top 500 US stocks by market capitalization. It’s used as the underlying instrument here because it provides overall market insight, has extremely liquid options, and ensures our Black-Scholes model, which assumes European style contracts, is accurate.</p>
+<p>Now that the gamma flip line has been obtained, let’s discuss its uses.</p>
+<h4 id="significance-for-traders">Significance For Traders</h4>
+<p>Traders that pay attention to the gamma flip line have an edge over traders that don’t. To understand why, let’s compare the practical differences between trading in positive versus negative net gamma markets.</p>
+<p>Above the gamma flip line, low volatility causes the market to exhibit the following characteristics: price action that is mean-reverting and range-bound, directional changes that are gradual, and pinning effects that are strong near levels with high open interest. Trading strategies that rely on consistent setups and trends—such as swing trading strategies—are more likely to find success here.</p>
+<p>Below the gamma flip line, high volatility causes the market to exhibit the following characteristics: price action that is momentum-driven and trending, directional changes that are sudden, and pinning effects that are negligible. Trading strategies that are based on momentum and have shorter time horizons—such as daytrading strategies—are more likely to find success here.</p>
+<p>To be a successful trader, it is essential to use strategies tailored to the conditions of the market. This is why, when price drops under the gamma flip line—signalling a change in volatility regimes—successful traders consider winding down their previous positions or switching their strategy.</p>
+<p>And what happens to naive traders that do not understand gamma exposure? Unaware of shifting market conditions, they may suddenly, and seemingly inexplicably, start experiencing losses by continuing to use a strategy that, despite previously being proftable, is no longer viable.</p>
+<p>Additionally, all market crashes occur in negative net gamma territory, caused in part by market maker hedging activity exacerbating downward moves. Traders paying attention to the gamma flip line are forewarned of potential market crashes, and are afforded time to position themselves accordingly.</p>
+<p>To illustrate, let’s observe the VIX (CBOE Volatility Index) with periods of negative net gamma highlighted:</p>
+<p><a href="/gamma-flip-line/vix-during-negative-net-gamma.png"><img src="/gamma-flip-line/vix-during-negative-net-gamma.png" alt=""></a></p>
+<p>Extreme spikes in volatility correspond to market crashes. Looking at the highlighted period around the most recent crash—the tariff induced crash of April 2025—we can see that it was predicted as early as late February, almost 2 months in advance.</p>
+<p>For these reasons, the gamma flip line is a valuable addition to any trader’s toolkit.</p>
+<h4 id="next-steps">Next Steps</h4>
+<p>For readers that would like to generate their own GEX curve, the code is open-source and can be found here: <a href="https://github.com/hkanwal/gamma-flip-line">https://github.com/hkanwal/gamma-flip-line</a>.</p>
+<p>To increase the accuracy of net gamma estimates, there are a couple of improvements that could be made. Firstly, better positioning estimates could be obtained using sophisticated methodologies, such as order flow analysis or skew-based heuristics. Secondly, the sample data could be increased by considering a wider range of options, though at the expense of greater data requirements and longer runtimes.</p>
+<h4 id="sources">Sources</h4>
+<ul>
+<li><a href="https://www.investopedia.com/terms/l/leadingindicator.asp">https://www.investopedia.com/terms/l/leadingindicator.asp</a></li>
+<li><a href="https://www.investopedia.com/terms/m/marketmaker.asp">https://www.investopedia.com/terms/m/marketmaker.asp</a></li>
+<li><a href="https://www.investopedia.com/terms/g/gamma.asp">https://www.investopedia.com/terms/g/gamma.asp</a></li>
+<li><a href="https://www.investopedia.com/terms/b/blackscholes.asp">https://www.investopedia.com/terms/b/blackscholes.asp</a></li>
+<li><a href="https://unusualwhales.com/news/gamma-flip-a-primer">https://unusualwhales.com/news/gamma-flip-a-primer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Newton&#x27;s_method">https://en.wikipedia.org/wiki/Newton’s_method</a></li>
+<li><a href="https://spotgamma.com/free-tools/spx-gamma-exposure/">https://spotgamma.com/free-tools/spx-gamma-exposure/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/S&#x26;P_500">https://en.wikipedia.org/wiki/S&#x26;P_500</a></li>
+<li><a href="https://www.youtube.com/watch?v=NJvFZk1aO1U&#x26;t=2032s">https://www.youtube.com/watch?v=NJvFZk1aO1U&#x26;t=2032s</a></li>
+<li><a href="https://www.investopedia.com/ask/answers/021015/what-cboe-volatility-index-vix.asp">https://www.investopedia.com/ask/answers/021015/what-cboe-volatility-index-vix.asp</a></li>
+</ul>
+<style>
+img:hover {
+  cursor: zoom-in;
+}
+
+div.hero-image img {
+  cursor: auto;
+}
+
+/* Center videos and images. */
+p:has(> video), p:has(> img), p:has(> a) {
+  text-align: center;
+}
+
+/* Uncenter specific link. */
+p:has(> a[href*="github"]) {
+  text-align: left;
+}
+</style>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+I am not a professional in any of the topics I cover. Do your own research. I am not liable for any decisions you may
+  make (financial, medical, etc). Blog template by @astrodotbuild.
+<!-- <div class='social-links'>
+    <a href='https://m.webtoo.ls/@astro' target='_blank'>
+      <span class='sr-only'>Follow Astro on Mastodon</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/mastodon'
+        ><path
+          fill='currentColor'
+          d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'
+        ></path></svg
+      >
+    </a>
+    <a href='https://twitter.com/astrodotbuild' target='_blank'>
+      <span class='sr-only'>Follow Astro on Twitter</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/twitter'
+        ><path
+          fill='currentColor'
+          d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z'
+        ></path></svg
+      >
+    </a>
+    <a href='https://github.com/withastro/astro' target='_blank'>
+      <span class='sr-only'>Go to Astro's GitHub repo</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/github'
+        ><path
+          fill='currentColor'
+          d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+        ></path></svg
+      >
+    </a>
+  </div> --> </footer>  </body></html>

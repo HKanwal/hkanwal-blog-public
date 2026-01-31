@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.0.3"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://blog.hkanwal.com/blog/bullish-percent-index/"><!-- Primary Meta Tags --><title>Bullish Percent Indices</title><meta name="title" content="Bullish Percent Indices"><meta name="description" content="A summary of how to construct and interpret these valuable market breadth indicators."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://blog.hkanwal.com/blog/bullish-percent-index/"><meta property="og:title" content="Bullish Percent Indices"><meta property="og:description" content="A summary of how to construct and interpret these valuable market breadth indicators."><meta property="og:image" content="https://blog.hkanwal.com/bullish-percent-index/Hero-Image.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://blog.hkanwal.com/blog/bullish-percent-index/"><meta property="twitter:title" content="Bullish Percent Indices"><meta property="twitter:description" content="A summary of how to construct and interpret these valuable market breadth indicators."><meta property="twitter:image" content="https://blog.hkanwal.com/bullish-percent-index/Hero-Image.png"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media (max-width: 720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] span[data-astro-cid-3ef6ksr2]{opacity:0}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:center}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media (max-width: 720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+[data-astro-image]{width:100%;height:auto;object-fit:var(--fit);object-position:var(--pos);aspect-ratio:var(--w) / var(--h)}[data-astro-image=responsive]{max-width:calc(var(--w) * 1px);max-height:calc(var(--h) * 1px)}[data-astro-image=fixed]{width:calc(var(--w) * 1px);height:calc(var(--h) * 1px)}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <!-- <h2>
+      <span>{SITE_TITLE}</span>
+    </h2> --> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Blog </a>  <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <!-- <div class='social-links'>
+      <a href='https://m.webtoo.ls/@astro' target='_blank'>
+        <span class='sr-only'>Follow Astro on Mastodon</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://twitter.com/astrodotbuild' target='_blank'>
+        <span class='sr-only'>Follow Astro on Twitter</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://github.com/withastro/astro' target='_blank'>
+        <span class='sr-only'>Go to Astro's GitHub repo</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+          ></path></svg
+        >
+      </a>
+    </div> --> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo> <img width="1020" height="510" src="/bullish-percent-index/Hero-Image.png" alt="" data-astro-cid-bvzihdzo> </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2025-10-15T04:00:00.000Z"> Oct 15, 2025 </time>  </div> <h1 data-astro-cid-bvzihdzo>Bullish Percent Indices</h1> <hr data-astro-cid-bvzihdzo> </div>  <p>Bullish percent indices are market breadth indicators that measure the percentage of stocks within a specific index, sector, or market that are exhibiting bullish patterns on their point &#x26; figure charts. Divergences on this indicator have historically signaled good times to buy or sell constituent holdings, making bullish percent indices valuable tools for traders. In order to learn how to use them effectively, this article outlines how they are created and how to interpret them.</p>
+<h4 id="point--figure-charting">Point &#x26; Figure Charting</h4>
+<p>Point and figure (P&#x26;F) charting is a time-independent way of visualizing price trends. It involves plotting columns (figures) of X or O symbols (points), where X columns represent upward price trends, and O columns represent downward price trends.</p>
+<p><a href="/bullish-percent-index/point-and-figure-chart.jpeg"><img src="/bullish-percent-index/point-and-figure-chart.jpeg" alt=""></a>
+P&#x26;F chart example</p>
+<p>In the above example, it can be observed that x-axis dates that would normally be present on stock charts are noticeably absent. This is because P&#x26;F charts focus only on price action, and not on time.</p>
+<p>Points are plotted based on the following rules:</p>
+<ul>
+<li>A new point is plotted in the current column when price moves in the direction of the current trend by one box size, where a box size is a constant price interval. For example, if price is currently trending upwards and the box size is $1, a new X point would be plotted if price were to increase by $1 from the current column high.</li>
+<li>A new column is started when price moves in the opposite direction of the current trend by the reversal amount of three box sizes. For example. if price is currently trending upwards and the box size is $1, a new column of three O points would be plotted if price were to decrease by $3 from the previous column high.</li>
+</ul>
+<p>For each stock, the box size that is selected depends to the stock’s trading price. Here is a table of box sizes that have traditionally been used:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Stock Price Range</th><th>Box Size</th></tr></thead><tbody><tr><td>Under $0.25</td><td>$0.0625</td></tr><tr><td>$0.25 to $1.00</td><td>$0.125</td></tr><tr><td>$1.00 to $5.00</td><td>$0.25</td></tr><tr><td>$5.00 to $20.00</td><td>$0.50</td></tr><tr><td>$20.00 to $100</td><td>$1.00</td></tr><tr><td>$100 to $200</td><td>$2.00</td></tr><tr><td>$200 to $500</td><td>$4.00</td></tr><tr><td>$500 to $1,000</td><td>$5.00</td></tr><tr><td>$1,000 to $25,000</td><td>$50.00</td></tr><tr><td>$25,000 and up</td><td>$500.00</td></tr></tbody></table>
+<p>Here is an example of how to construct a P&#x26;F chart using the rules outlined above (assume a box size of $1 and reversal amount of $3):</p>
+<p>Given historical price action of $23, $24, $26, $25, $26, $23, and $22, we can construct the following P&#x26;F chart.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="center">Price</th><th align="center">Column 1</th><th align="center">Column 2</th></tr></thead><tbody><tr><td align="center">$26</td><td align="center">X</td><td align="center"></td></tr><tr><td align="center">$25</td><td align="center">X</td><td align="center">O</td></tr><tr><td align="center">$24</td><td align="center">X</td><td align="center">O</td></tr><tr><td align="center">$23</td><td align="center"></td><td align="center">O</td></tr><tr><td align="center">$22</td><td align="center"></td><td align="center">O</td></tr></tbody></table>
+<p>First, price increased from $23 to $26, which is three box sizes and means we need to plot three X points in the first column. Then, price decreased by $1 to $25, but, since this is less than the required reversal amount of three box sizes, no point is plotted. Next, price increased by one box size to $26, but, since this is not greater than the highest price for this column, no point is plotted. Finally, price dropped to $23, then $22, which causes a new column of three O points to be plotted because the reversal amount of $3 was met, plus an additional O point for the drop to $22.</p>
+<h4 id="bullish-percent-index-construction">Bullish Percent Index Construction</h4>
+<p>To construct a Bullish Percent Index (BPI), we must first define the group of stocks we are interested in studying. In most cases, this will be an index or ETF that already exists. For example, if we are interested in the technology sector, we can construct a BPI for XLK (Technology Select Sector SPDR Fund), which is a popular ETF for the US technology sector.</p>
+<p>Next, a P&#x26;F chart for each constituent stock is programmatically generated. For the sake of consistency, historical daily closing prices for each stock are used, and intraday movements are ignored. For example, say a constituent stock had a previous closing price of $10 and has a box size of $1. If the stock experiences massive intraday price swings of $5 but closes at $10 again, no new P&#x26;F point will be plotted because intraday movements are not considered.</p>
+<p>Having obtained every P&#x26;F chart for the day, the number of charts exhibiting P&#x26;F technical buy signals is then programmatically counted. A stock must exhibit one of three buy signals to be included in the BPI count: double top breakout, triple top breakout, or ascending triple top breakout.</p>
+<p>A double top or triple top breakout involves an X point that exceeds the high of the previous one or two X columns.</p>
+<p><a href="/bullish-percent-index/triple-top-breakout.png"><img src="/bullish-percent-index/triple-top-breakout.png" alt=""></a></p>
+<p>An ascending triple top breakout is similar, but more specifically refers to a breakout from an ascending triangle pattern.</p>
+<p><a href="/bullish-percent-index/ascending-triangle-breakout.png"><img src="/bullish-percent-index/ascending-triangle-breakout.png" alt=""></a></p>
+<p>More complex bullish patterns, such as bullish catapults, are not included because they are less standardized for automated, large-scale calculations across hundreds of stocks.</p>
+<p>By dividing the count of bullish stocks by the total number of stocks in the index, a percentage is obtained. Plotting these daily historical percentages produces the BPI indicator:</p>
+<p><a href="/bullish-percent-index/bpinfo-with-rsi.png"><img src="/bullish-percent-index/bpinfo-with-rsi.png" alt=""></a></p>
+<p><em>Note: This chart was made on <a href="https://stockcharts.com/sc3/ui/?s=%24BPINFO">stockcharts.com</a>, where anyone can recreate it for free.</em></p>
+<h4 id="momentum-and-strategy">Momentum And Strategy</h4>
+<p>Though a BPI alone can provide useful market breadth information, comparing it to its RSI allows more insight to be gleaned.</p>
+<p>Firstly, oversold (RSI &#x3C; 30) and overbought (RSI > 70) momentum readings are still applicable (read more <a href="https://blog.hkanwal.com/blog/rsi/#zones">here</a>). Secondly, and more importantly, divergences between a BPI and its RSI have historically signaled opportune moments to buy or sell.</p>
+<p><a href="/bullish-percent-index/divergences.png"><img src="/bullish-percent-index/divergences.png" alt=""></a></p>
+<p>In the above chart, both bullish and bearish divergences have been annotated. It can be observed that, in the case of the BPI for XLK, bearish divergences have historically coincided with local market tops (highlighted using vertical red lines). Conversely, bullish divergences have historically signaled good times to buy, with RSI usually shooting back up into overbought territory soon after.</p>
+<p>Let’s take a look at the BPI for a broader group of stocks in order to confirm the consistency of the divergence signals observed above. Here is the BPI for SPX:</p>
+<p><a href="/bullish-percent-index/bpspx.png"><img src="/bullish-percent-index/bpspx.png" alt=""></a></p>
+<p>Again, we see similar divergences playing out in the same way. Though there are fewer bullish divergences on this chart, we can observe that the index consistently runs up into overbought territory soon after they do form.</p>
+<p>Based on their solid track record, the formation of BPI divergences represent excellent opportunities to enter asymmetric trades. After a bullish divergence has formed, opening a position in the target ETF (or even better, in individual constituent stocks that are setting up well) has historically been likely to result in gains. Accordingly, this indicator is a valuable addition into any active trader’s toolbox.</p>
+<h4 id="sources">Sources</h4>
+<ul>
+<li><a href="https://blog.elearnmarkets.com/trade-using-point-and-figure-chart/">https://blog.elearnmarkets.com/trade-using-point-and-figure-chart/</a></li>
+<li><a href="https://www.investopedia.com/articles/technical/03/081303.asp">https://www.investopedia.com/articles/technical/03/081303.asp</a></li>
+<li><a href="https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/point-and-figure-basics/introduction-to-point-and-figure-charts">https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/point-and-figure-basics/introduction-to-point-and-figure-charts</a></li>
+<li><a href="https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/classic-patterns">https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/classic-patterns</a></li>
+<li><a href="https://stockcharts.com/sc3/ui/?s=%24BPINFO">https://stockcharts.com/sc3/ui/?s=%24BPINFO</a></li>
+<li><a href="https://youtu.be/q9jJzJpVdic?si=Jq-8A6W0yaudavG7">https://youtu.be/q9jJzJpVdic?si=Jq-8A6W0yaudavG7</a></li>
+<li><a href="https://youtu.be/8Y6k_leHGNE?si=Ebwiz--6L5C7dEGY">https://youtu.be/8Y6k_leHGNE?si=Ebwiz—6L5C7dEGY</a></li>
+</ul>
+<style>
+img:hover {
+  cursor: zoom-in;
+}
+
+div.hero-image img {
+  cursor: auto;
+}
+
+/* Center videos and images. */
+/* Also conveniently centers captions. */
+p:has(> video), p:has(img) {
+  text-align: center;
+}
+
+/* Fix spacing before and after unordered lists, ignoring sources. */
+p + ul {
+  margin-block-start: -1em;
+  margin-block-end: 2em;
+}
+
+/* Add some space between list items, ignoring sources. */
+p + ul li {
+  margin-block-start: 1em;
+}
+
+/* Fix spacing after tables. */
+table {
+  margin-block-end: 2em;
+}
+</style>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+I am not a professional in any of the topics I cover. Do your own research. I am not liable for any decisions you may
+  make (financial, medical, etc). Blog template by @astrodotbuild.
+<!-- <div class='social-links'>
+    <a href='https://m.webtoo.ls/@astro' target='_blank'>
+      <span class='sr-only'>Follow Astro on Mastodon</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/mastodon'
+        ><path
+          fill='currentColor'
+          d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'
+        ></path></svg
+      >
+    </a>
+    <a href='https://twitter.com/astrodotbuild' target='_blank'>
+      <span class='sr-only'>Follow Astro on Twitter</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/twitter'
+        ><path
+          fill='currentColor'
+          d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z'
+        ></path></svg
+      >
+    </a>
+    <a href='https://github.com/withastro/astro' target='_blank'>
+      <span class='sr-only'>Go to Astro's GitHub repo</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/github'
+        ><path
+          fill='currentColor'
+          d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+        ></path></svg
+      >
+    </a>
+  </div> --> </footer>  </body></html>

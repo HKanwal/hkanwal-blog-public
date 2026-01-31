@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.0.3"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://blog.hkanwal.com/blog/ust-explained/"><!-- Primary Meta Tags --><title>US Treasuries (UST) Explained</title><meta name="title" content="US Treasuries (UST) Explained"><meta name="description" content="A primer on US treasuries. Explains treasury types, yield, the forward curve, yield curves, and market factors."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://blog.hkanwal.com/blog/ust-explained/"><meta property="og:title" content="US Treasuries (UST) Explained"><meta property="og:description" content="A primer on US treasuries. Explains treasury types, yield, the forward curve, yield curves, and market factors."><meta property="og:image" content="https://blog.hkanwal.com/ust-explained/Hero-Image.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://blog.hkanwal.com/blog/ust-explained/"><meta property="twitter:title" content="US Treasuries (UST) Explained"><meta property="twitter:description" content="A primer on US treasuries. Explains treasury types, yield, the forward curve, yield curves, and market factors."><meta property="twitter:image" content="https://blog.hkanwal.com/ust-explained/Hero-Image.png"><style>:root{--accent: #2337ff;--accent-dark: #000d8a;--black: 15, 18, 25;--gray: 96, 115, 159;--gray-light: 229, 233, 240;--gray-dark: 34, 41, 57;--gray-gradient: rgba(var(--gray-light), 50%), #fff;--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Atkinson;src:url(/fonts/atkinson-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;background:linear-gradient(var(--gray-gradient)) no-repeat;background-size:100% 600px;word-wrap:break-word;overflow-wrap:break-word;color:rgb(var(--gray-dark));font-size:20px;line-height:1.7}main{width:720px;max-width:calc(100% - 2em);margin:auto;padding:3em 1em}h1,h2,h3,h4,h5,h6{margin:0 0 .5rem;color:rgb(var(--black));line-height:1.2}h1{font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}strong,b{font-weight:700}a,a:hover{color:var(--accent)}p{margin-bottom:1em}.prose p{margin-bottom:2em}textarea{width:100%;font-size:16px}input{font-size:16px}table{width:100%}img{max-width:100%;height:auto;border-radius:8px}code{padding:2px 5px;background-color:rgb(var(--gray-light));border-radius:2px}pre{padding:1.5em;border-radius:8px}pre>code{all:unset}blockquote{border-left:4px solid var(--accent);padding:0 0 0 20px;margin:0;font-size:1.333em}hr{border:none;border-top:1px solid rgb(var(--gray-light))}@media (max-width: 720px){body{font-size:18px}main{padding:1em}}.sr-only{border:0;padding:0;margin:0;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:inset(50%);white-space:nowrap}a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}header[data-astro-cid-3ef6ksr2]{margin:0;padding:0 1em;background:#fff;box-shadow:0 2px 8px rgba(var(--black),5%)}h2[data-astro-cid-3ef6ksr2]{margin:0;font-size:1em}h2[data-astro-cid-3ef6ksr2] span[data-astro-cid-3ef6ksr2]{opacity:0}nav[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;justify-content:center}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{padding:1em .5em;color:var(--black);border-bottom:4px solid transparent;text-decoration:none}nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active{text-decoration:none;border-bottom-color:var(--accent)}.social-links[data-astro-cid-3ef6ksr2],.social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]{display:flex}@media (max-width: 720px){.social-links[data-astro-cid-3ef6ksr2]{display:none}}footer[data-astro-cid-sz7xmlte]{padding:2em 1em 6em;background:linear-gradient(var(--gray-gradient)) no-repeat;color:rgb(var(--gray));text-align:center}.social-links[data-astro-cid-sz7xmlte]{display:flex;justify-content:center;gap:1em;margin-top:1em}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{text-decoration:none;color:rgb(var(--gray))}.social-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]:hover{color:rgb(var(--gray-dark))}
+main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:720px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;padding:1em 0;text-align:center;line-height:1}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}
+[data-astro-image]{width:100%;height:auto;object-fit:var(--fit);object-position:var(--pos);aspect-ratio:var(--w) / var(--h)}[data-astro-image=responsive]{max-width:calc(var(--w) * 1px);max-height:calc(var(--h) * 1px)}[data-astro-image=fixed]{width:calc(var(--w) * 1px);height:calc(var(--h) * 1px)}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <!-- <h2>
+      <span>{SITE_TITLE}</span>
+    </h2> --> <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Blog </a>  <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <!-- <div class='social-links'>
+      <a href='https://m.webtoo.ls/@astro' target='_blank'>
+        <span class='sr-only'>Follow Astro on Mastodon</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://twitter.com/astrodotbuild' target='_blank'>
+        <span class='sr-only'>Follow Astro on Twitter</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://github.com/withastro/astro' target='_blank'>
+        <span class='sr-only'>Go to Astro's GitHub repo</span>
+        <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32'
+          ><path
+            fill='currentColor'
+            d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+          ></path></svg
+        >
+      </a>
+    </div> --> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo> <div class="hero-image" data-astro-cid-bvzihdzo> <img width="1020" height="510" src="/ust-explained/Hero-Image.png" alt="" data-astro-cid-bvzihdzo> </div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2025-05-31T04:00:00.000Z"> May 31, 2025 </time>  </div> <h1 data-astro-cid-bvzihdzo>US Treasuries (UST) Explained</h1> <hr data-astro-cid-bvzihdzo> </div>  <p>Ever since Trump’s “Liberation Day” rally, rising long-term treasury yields have been a hot topic in financial news media. In order to understand the implications of high yields, and to evaluate for ourselves whether the concern is warranted, a solid foundational base of knowledge is required. Though the subject is broad, here’s a primer on US treasuries and the bond market.</p>
+<h4 id="the-names-bond">The Name’s Bond</h4>
+<p>What are treasuries? Treasuries refer to financial instruments (securities) representing debt issued by the US Department of the Treasury, aka the US Treasury (hence the name <em>treasuries</em>). Each issued treasury has an associated repayment period, aka maturity, which is the length of time after issuance over which the US goverment must repay the lender. These maturities can range from as short as 4 weeks to as long as 30 years.</p>
+<p>Even if the borrower is a government, investors are not in the business of lending money for free! Instead, the US government must pay interest to its treasury holders—the distribution frequency depending on the type of treasury held. The US Treasury has various marketable offerings available for auction. Here is a brief summary of all of them:</p>
+<p>Treasury bills (T-bills) are short-term securities with maturities of 1 year of less, the standard maturities being 4, 8, 13, 17, 26, or 52 weeks. Given their brevity, T-bills are structured as zero-coupon investments, meaning holders do not recieve periodic interest payments. Instead, T-bills are sold at a discount to their face value, with the difference between a T-bill’s face value and discount price constituting its interest. For example, a T-bill with a face value of $100 (meaning $100 would be paid out at maturity) may be auctioned at a discount price of $95, with the $5 difference constituting its interest.</p>
+<p>Treasury notes (T-notes) are medium-term securities with maturities ranging from 2 years to 10 years, the standard maturities being 2, 3, 5, 7, or 10 years. Based on their fixed coupon rates, which are decided at the time of auction, T-notes pay out periodic coupons (interest payments) semi-annually. For example, a 2-year T-note with a face value of $100 auctioned at a 4% annual coupon rate (auction rate) would pay out $2 semi-annually four times, resulting in $8 of interest at maturity.</p>
+<p>Treasury bonds (T-bonds) are long-term securities with maturities of either 20 or 30 years. Like T-notes, T-bonds have fixed coupon-rates and pay out periodic coupons semi-annually.</p>
+<p>Treasury Inflation-Protected Securities (TIPS) are medium to long-term securities with maturities of 5, 10, or 30 years. To provide investors with protection against inflation, TIPS feature monthly adjustments to the principal amount based on changes in the CPI (Consumer Price Index). If the CPI were to go up, TIPS holders would see a proportional rise in their principal amount, and vice-versa if the CPI were to go down. The resultant semi-annual coupons—which use the inflation-adjusted principal—should therefore provide a consistent real return at the fixed coupon rate. Additionally, to protect against a scenario in which the inflation-adjusted principal becomes less than the original face value at maturity, TIPS are redeemed at whichever is higher.</p>
+<p>Floating Rate Notes (FRNs) are medium-term securities with 2-year maturities. Like the name implies, they have a variable interest rate that updates weekly. New rates are calculated as the most recent 13-week T-bill auction rate plus a fixed spread which is decided at the time of auction. Unlike other treasuries, coupons are distrubuted quarterly (every 3 months).</p>
+<p><em>Note: By definition, all treasuries are technically bonds because they are fixed-income debt instruments. However, since the term “bond” can also be used to refer specifically to T-bonds, its disambiguation depends on context. For example, news articles mentioning “bond markets” are most likely referring to markets for treasuries in general, not just for T-bonds.</em></p>
+<h4 id="whats-the-deal-with-yield">What’s The Deal With Yield?</h4>
+<p>The treasuries covered so far are <strong>marketable</strong>, meaning they can be resold on secondary markets after auction. This provides investors with the flexibility to liquidate prior to maturity, though they will be beholden to the market.</p>
+<p>When discussing the value of treasuries, interest rates, aka yields, are cited more frequently than prices. Why? Because yields allow for the easier comparison of returns between treasuries of differing maturities, face values, and/or coupon rates. To illustrate, a 2-year treasury and a 10-year treasury, despite having vastly different prices, could have the same yields, and so the same returns, which investors consider to be far more important.</p>
+<p><a href="/ust-explained/formulas/bond-pricing-formula.png"><img src="/ust-explained/formulas/bond-pricing-formula.png" alt=""></a></p>
+<p>The above bond pricing formula defines the relationship between a treasury’s price and its yield, where <em>Par Value</em> refers to face value, <em>n</em> is the number of periods remaining until maturity, and <em>YTM</em> (Yield To Maturity) is the annualized yield—assuming semi-annual coupons. While the formula may seem daunting at first, learning about <em>the time value money</em> will make it simpler to understand.</p>
+<p>TVM (Time Value of Money) is the financial concept that money received in the present is more valuable than money received in the future due to factors like inflation, opportunity cost, interest, and uncertainty. <em>Discounting</em>, the opposite of <em>compounding</em>, is the process of converting a future value (FV) into a present value (PV), accounting for TVM. The discounting formula is:</p>
+<p><a href="/ust-explained/formulas/discounting-formula.png"><img src="/ust-explained/formulas/discounting-formula.png" alt=""></a></p>
+<p>Here, <em>r</em> is the discount rate and <em>n</em> is the number of time periods. Does the right-hand side of the equation seem familiar? If you compare it to the bond pricing formula, you will find that <strong>a treasury’s price is simply a sum of discounted future values</strong>. Specifically, it’s the sum of discounted future coupon payments plus the eventual principal repayment. The constant discount rate applied to all of these future cash flows is YTM / 2.</p>
+<p>Having understood the formula, let’s now analyze its characteristics. Firstly, it is clear that <strong>the relationship between price and yield is inversely proportional</strong>. This means that when yields are up, the treasury market is actually down, and vice versa. This inverse relationship can oftentimes be counterintuitive for market onlookers, but it explains why headlines like “bond market collapse” correspond to high yields.</p>
+<p>Secondly, we can see that it is impossible to isolate for YTM in the bond pricing formula. Instead, YTM must be calculated via numerical methods using computer assistance. Alternatively, an approximation can be obtained directly using a simpler formula:</p>
+<p><a href="/ust-explained/formulas/ytm-approximation.png"><img src="/ust-explained/formulas/ytm-approximation.png" alt=""></a></p>
+<p>While the above approximation may be convenient in the absence of computational tools, due to its inaccuracy, which gets worse for longer maturities and for larger price deviations from par, the original formula should be preferred.</p>
+<p><em>Note: Besides YTM, there are various other types of yield, including current yield, cost yield, and nominal yield. YTM, however, is the most commonly used and referred to.</em></p>
+<h4 id="zero-curve">Zero Curve</h4>
+<p>Though YTM is the standard metric when discussing yields, bond prices calculated using YTM are approximations made under the assumption that the discount rate for each future cash flow is constant. In reality, rates for different times to future cash flow vary. For example, due to a variety of market and economic factors, the market might offer a 2% discount rate (2% per year) for a period of 2 years, but a 3% discount rate (3% per year) if the period is 4 years. For this reason, a more accurate bond pricing model involves applying a separate discount rate to each future cash flow:</p>
+<p><a href="/ust-explained/formulas/bond-pricing-formula-using-spot-rates.png"><img src="/ust-explained/formulas/bond-pricing-formula-using-spot-rates.png" alt=""></a></p>
+<p>Here, each rate is denoted by <em>s</em>, standing for <em>spot rate</em>. A spot rate is the current discount rate the market is willing to pay for the time till the corresponding future cash flow. Continuing from our previous example, our new model would apply a spot rate of 2% for a coupon payment scheduled 2 years in the future, and a spot rate of 3% for a coupon payment scheduled 4 years in the future.</p>
+<p>How can spot rates be obtained? Fortunately, there exists a type of financial instrument representing exactly what we need. Treasury STRIPS bonds are created by separating the individual coupon and principal payments of a treasury into their own, distinct securities. Since each STRIPS represents a single future cash flow that is paid out at maturity, and does not pay coupons, its market rate is the spot rate for that maturity. By collecting market data for these zero-coupon securities and graphing their rates, we get the spot rate curve, or zero curve:</p>
+<p><a href="/ust-explained/Zero-Curve.png"><img src="/ust-explained/Zero-Curve.png" alt=""></a></p>
+<p>There are three zero curves graphed above. The first curve is raw STRIPS spot rate data collected through a broker. The second curve is a continuous mathematical model fitted through the STRIPS data. The model has been weighted in favor of shorter maturities to reflect their higher liquidity and more accurate pricing. The third curve is the one provided by the Federal Reserve. It incorporates more sophisticated methodologies and is likely to be the most accurate.</p>
+<p>Having constructed the zero curve, which represents pure TVM, the more precise version of the bond pricing formula can be easily used by plugging in the corresponding spot rate for each future cash flow.</p>
+<h4 id="forward-curve-and-federal-reserve">Forward Curve And Federal Reserve</h4>
+<p>The forward curve is a graphical representation of the market’s expectations for future short-term rates. It can be used to gauge how likely the market thinks it is for the central bank, the Federal Reserve (Fed), to raise or lower its rates.</p>
+<p>Given it’s ability to provide useful economic insights, let’s learn how to construct the forward curve. Derived from the zero curve, the forward curve plots forward rates calculated according to the following formula:</p>
+<p><a href="/ust-explained/formulas/forward-rate-formula.png"><img src="/ust-explained/formulas/forward-rate-formula.png" alt=""></a></p>
+<p>A forward rate is an expected future interest rate for a specific future period. In the formula, <em>t1</em> is the time until the start of the future period (in years), and <em>t2</em> is the time until the end of the future period. The length of the future period, usually 1 year, is <em>(t2 - t1)</em> and is kept constant for each calculation. <em>r1</em> is the spot rate at <em>t1</em>—the value of the zero curve when time to maturity is equal to <em>t1</em>—and <em>r2</em> is the spot rate at <em>t2</em>. The result, <em>r1,2</em>, is the forward rate for the period from <em>t1</em> to <em>t2</em>.</p>
+<p>To produce the forward curve, the forward rate formula is applied continuously across the zero curve. Then, the resulting forward rates are plotted against <em>t1</em>, as shown below:</p>
+<p><a href="/ust-explained/Forward-Curve.png"><img src="/ust-explained/Forward-Curve.png" alt=""></a></p>
+<p>According to the shape of the forward curve, the market does not expect many more rate cuts during this cutting cycle, which it expects to last another 1 to 3 years. Afterwards, in the medium term, the market is expecting 1-year rates to move up over the next 10-15 years. This goes against the current adminstration’s vocal demands for rate cuts, both in terms of the speed at which they should fall, and the level they should be dropped to. So, what are the reasons for this shape?</p>
+<p>The Federal Reserve has a dual mandate: to promote maximum employment and stable prices. These two goals guide the Fed’s decisions regarding rate changes. Consequently, economic strength and inflation expectations are the two most influential factors that determine the forward curve’s shape.</p>
+<p>To combat rising unemployment, the Fed is likely to lower rates to stimulate economic activity. On the flip side of the coin, to combat high inflation, the Fed is likely to raise rates to cool economic activity. Therefore, the hump in the forward curve suggests that <strong>the market expects high inflation to re-emerge in the medium term</strong>, potentially due to sticky inflation or tariff effects.</p>
+<p>What does the shape suggest about unemployment expectations? Either it suggests continued US economic strength to enable and withstand the rate hikes, or it suggests that, in the case of simultaneous high inflation and rising unemployment (stagflation), the Fed will prioritize fighting inflation at the expense of economic activity.</p>
+<h4 id="yield-curve-shifts">Yield Curve Shifts</h4>
+<p>The curves presented thus far were generated using data collected on May 21, 2025, representing a single-day market snapshot. If the data were to have been collected on a different day, the curves would have looked different, because spot rates, and yields in general, change over time. The ways in which yield curves can change are called <em>yield curve shifts</em>. The four most common shifts are: bear steepeners, bear flatteners, bull steepeners, and bull flatteners. Here is what they look like:</p>
+<p><a href="/ust-explained/curve-patterns.png"><img src="/ust-explained/curve-patterns.png" alt=""></a></p>
+<p>The names are self-explanatory. The two bearish shifts correspond to an overall increase in yields, which is bearish for prices because yield and price are inversely proportional. Likewise, the two bullish shifts correpond to an overall decrease in yields. The steepeners correspond to a steepening of the curve’s slope, and, likewise, the flatteners correspond to a flattening of the curve’s slope.</p>
+<p>With this nomenclature in our vocabulary, we will be able to discuss yield curves in more depth.</p>
+<h4 id="components-of-yield">Components Of Yield</h4>
+<p>In order to demystify yield, let’s think of it as a sum of multiple components that can each be analyzed individually.</p>
+<p>First, <strong>TVM</strong>, which was previously discussed, sets the baseline yield of a treasury. This baseline yield is the short-term, risk-free rate that can be earned on a 3-month T-bill, free from default risk and having minimal interest rate risk. Absent other premiums, the yield of a treasury of any maturity would just be that of the 3-month T-bill rolled over and over for its entire lifetime, which is what the zero curve visualizes. To get investors to take the risk of holding longer maturities, they must be paid a premium.</p>
+<p>What is interest rate risk? It is the risk that the Fed will increase rates in the future, thereby making the existing treasuries held by investors less valuable. To compensate for this risk, there is a <strong>term premium</strong> that is added into yield. <em>Duration</em> is a measure of price sensitivity to interest rate changes, and, therefore, is a measure of interest rate risk. Since, due to the effects of compound interest, longer maturity treasuries have higher duration (higher interest rate risk), term premium increases as time to maturity increases.</p>
+<p>Term premium tends to be inversely proportional to the risk-free rate. This is because, when the risk-free rate is low, it is more likely to increase than to decrease, which causes term premium to be high. Likewise, when the risk-free rate is high, it is more likely to decrease than to increase, which causes term premium to be low.</p>
+<p>Furthermore, term premium is heavily influenced by the forward curve and changes in its shape. For example, a bear steepening forward curve—which corresponds to greater interest rate risk—would cause term premium to increase.</p>
+<p>To visualize term premium, a good rough proxy is the 10-year minus the 3-month:</p>
+<p><a href="/ust-explained/10y-3mo.png"><img src="/ust-explained/10y-3mo.png" alt=""></a></p>
+<p>Term premium, represented by the solid blue line, behaves as expected. It exhibits an inverse relationship with short-term rates, which are represented by the dotted line. We can observe that term premium is historically at its lowest when short-term rates are at their highest, typically before the occurrence of a recession. During a recession, as rates fall, term premium appears to rise proportionally. Finally, after a recession, when short-term rates are at their lowest, term premium is historically at its highest.</p>
+<p>The fact that the value of treasuries increases as short-term rates fall during a recession makes them a good hedge against economic downturns. Consequently, during times of increasing recession likelihood, a <strong>recession premium</strong> is introduced into yield—which, unlike term premium, subtracts from yield—due to investors being willing to pay extra for the increased upside potential.</p>
+<p>The three yield components discussed so far—TVM, term premium, and recession premium—are considered to be the major ones. However, in order to obtain a complete understanding of yield, let’s ensure we don’t miss any of its influencing factors.</p>
+<p>If there are high inflation expectations, does there exist an inflation premium that causes yields to increase? In normal market conditions, a separate inflation premium is not considered because the forward curve, which is captured in the term premium, already incorporates inflation expectations. However, <strong>in the case that the Fed signals it will not cut rates despite high inflation, we may see an independent inflation premium emerge</strong> that adequately compensates investors for the depreciation of the US dollar. In such a scenario, though we would see term premium decrease due to a flattening of the forward curve, high yields would persist due to an inflation premium that has separated from term premium.</p>
+<p>Longer maturity treasuries are traded less frequently than shorter maturity treasuries, making them less liquid. This means investors may find it harder to sell their assets at favorable prices due to larger bid-ask spreads and higher volatility. As compensation, a <strong>liquidity premium</strong> is added into yield, increasing for longer maturities.</p>
+<p><strong>Credit-risk premium</strong> is compensation for the possibility of default. Usually, it is only discussed in the context of corporate bonds, or bonds for third-world countries. However, given the worsening financial position and rising debt burden of the US, the slim but increasing possiblity of the country defaulting, as evidenced by the recent Moody’s downgrade, could begin introducing a credit-risk premium.</p>
+<p>Like any traded asset, treasuries are beholden to the fundamental <strong>supply-and-demand dynamics</strong> of the market. In fact, all of the aforementioned premiums can be considered simply as increases or decreases in treasury demand due to specific reasons. Term premium, for example, can be considered as the decrease in demand for longer maturity treasuries due to interest rate risk. Likewise, recession premium can be considered as the increase in demand due to a rising probability of recession. Through this lens, an arbitrary amount of other premiums—reasons for an increase or decrease in demand—can be hypothesized, especially given the large number of players in this market. It’s a dynamic that makes the bond market simultaneously simple yet complex.</p>
+<p>For example, the increase in volatility caused by Trump’s “Liberation Day” tariff announcements led to a decrease in treasury demand due to highly leveraged basis trades needing to deleverage to meet increased collateral requirements. Though it is not one of the standard types of premiums that is usually discussed, there is clearly a volatility premium that arises as a consequence of supply-and-demand dynamics.</p>
+<p>On the flip side, the issuance of a larger than usual amount of treasuries can cause yields to rise due to increased supply. This can occur when the US goverment, who finances its deficit spending via treasuries, does an even worse job at managing its budget than usual.</p>
+<h4 id="par-yield-curve">Par Yield Curve</h4>
+<p>So far, we have plotted the yield curve for zero-coupon treasuries (the zero curve), and the yield curve for expected future rates (the forward curve), but we have yet to plot the yield curve for actual coupon bearing treasuries proper. Let’s do that now.</p>
+<p>If two treasuries have the same maturity but different coupon rates, they will have different YTMs—assuming they are fairly priced. This is called the coupon effect and occurs because the two will have different coupon amounts that, when reinvested, will each produce varying returns. Since an efficient market ensures that both treasuries will have an equal <em>total return</em>, in order to compensate for their varying coupons, their yields must be different.</p>
+<p><em>Note: Ironically, the coupon effect implies that two treasuries with different coupon rates and equal maturities will have different durations (sensitivities to interest rate changes).</em></p>
+<p>In order to mitigate distortions caused by the coupon effect, the curve is constructed using treasuries at par. A par treasury is one whose par value is equal to price. Since this occurs when its coupon rate is equal to its YTM, this reduces worries of coupon rate variation.</p>
+<p>Treasuries issued in the most recent auction (on-the-run treasuries) are more ideal for par curve construction than treasuries issued in older auctions (off-the-run treasuries). This is because they trade closest to par, have increased liquidity, and have more accurate pricing.</p>
+<p>Though we could collect our own market data for on-the-run treasuries to construct a par yield curve, let’s avoid the hassle this time by just using official data released by the US Treasury. Here’s a plot of their curve for May 21, 2025:</p>
+<p><a href="/ust-explained/Par-Yield-Curve.png"><img src="/ust-explained/Par-Yield-Curve.png" alt=""></a></p>
+<p>The shape of a par yield curve can tell us a lot about the market’s economic outlook. There are three common shapes: positive (upwards sloping), flat, or inverted (downwards sloping). Let’s discuss when, and why, each shape tends to occur.</p>
+<p>A curve with a sharp upwards slope tends to occur during periods of high inflation. It reflects market expectations of rapid rate hikes.</p>
+<p>A curve with a gradual upwards slope tends to occur in normal market conditions. This shape is characteristic of moderate inflation and a growing economy. These periods usually coincide with low interest rates that fuel growth. A high term premium and low recession premium contribute to the curve’s upwards sloping shape as investors move out of duration.</p>
+<p>A flat curve is only seen during periods of transition between positively sloping and negatively sloping curves—in either direction.</p>
+<p>An inverted curve tends to occur in advance of recessions. This shape is characteristic of low inflation and an economic slowdown. These periods usually coincide with high interest rates that cool the economy. A low term premium and high recession premium contribute to the curve’s downwards sloping shape as investors move into duration.</p>
+<p>Given the common shapes the yield curve can take, and their corresponding economic implications, here’s a question for the reader: what does the shape of the May 21st par yield curve look like, and what does it mean for the economy?</p>
+<p>The curve looks inverted, and is in the process of uninverting, having already bear steepened from deeper inversions seen in 2023 and 2024. This inversion corresponds to the current period of high interest rates and a slowing economy—as evidenced by the most recent negative GDP print in Q1 of 2025.</p>
+<p><em>Note: Though indicative of economic slowdown, periods of yield curve inversion do not necessarily feature an underperforming equities market. Take the 2024 bull run as an example.</em></p>
+<p>According to past data, the yield curve’s inverted shape signifies that the economy could soon be facing a recession. With regards to timing, historically, the recession tends to occur after the yield curve bear steepens from an inverted shape to a positive shape, so there is still time—typically ranging from a few months to a couple of years—to position accordingly.</p>
+<p>Here is the historical data that was referenced:</p>
+<p><a href="/ust-explained/10y-2y.png"><img src="/ust-explained/10y-2y.png" alt=""></a></p>
+<p>Periods when the blue line is negative correspond to an inverted yield curve, and areas shaded grey correspond to US recessions. Notably, uninversions have always been followed by recessions.</p>
+<h4 id="conclusion">Conclusion</h4>
+<p>The recent rise in yields on the long end of the curve that has the media ringing alarm bells seems to have been caused by a mix of: market expectations of high inflation in the medium-term, increased bond market volatility, and fears of increased treasury supply due to projections of deeper government deficits. How concerned should we be? Though yields are trending upwards, a “bond market collapse” is unlikely and probably sensationalist. What’s more likely is a recession on the horizon, as suggested by macro-economic data.</p>
+<p>In this article, we have covered treasury basics, yield basics, factors that influence treasury markets, and yield curve patterns. I hope that I have provided the reader with a sufficient foundation of knowledge—alongside reliable primary sources of yield data—atop which objective and independent evaluations of the bond market, unreliant on the opinions of others or the media, can be made with confidence.</p>
+<h4 id="sources">Sources</h4>
+<p>The Name’s Bond</p>
+<ul>
+<li><a href="https://www.investopedia.com/terms/b/bond.asp">https://www.investopedia.com/terms/b/bond.asp</a></li>
+<li><a href="https://www.fidelity.com/fixed-income-bonds/individual-bonds/us-treasury-bonds">https://www.fidelity.com/fixed-income-bonds/individual-bonds/us-treasury-bonds</a></li>
+</ul>
+<p>What’s The Deal With Yield?</p>
+<ul>
+<li><a href="https://www.investopedia.com/terms/b/bond-valuation.asp">https://www.investopedia.com/terms/b/bond-valuation.asp</a></li>
+<li><a href="https://www.investopedia.com/terms/y/yieldtomaturity.asp">https://www.investopedia.com/terms/y/yieldtomaturity.asp</a></li>
+<li><a href="https://www.investopedia.com/terms/y/yield.asp">https://www.investopedia.com/terms/y/yield.asp</a></li>
+</ul>
+<p>Zero Curve</p>
+<ul>
+<li><a href="https://www.investopedia.com/terms/t/treasurystrips.asp">https://www.investopedia.com/terms/t/treasurystrips.asp</a></li>
+<li><a href="https://www.investopedia.com/terms/s/spot_rate_yield_curve.asp">https://www.investopedia.com/terms/s/spot_rate_yield_curve.asp</a></li>
+<li><a href="https://www.interactivebrokers.com/campus/trading-lessons/the-bond-scanner-layout/">https://www.interactivebrokers.com/campus/trading-lessons/the-bond-scanner-layout/</a></li>
+<li><a href="https://www.federalreserve.gov/data/yield-curve-tables/feds200628_1.html">https://www.federalreserve.gov/data/yield-curve-tables/feds200628_1.html</a></li>
+</ul>
+<p>Forward Curve And Federal Reserve</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Forward_rate">https://en.wikipedia.org/wiki/Forward_rate</a></li>
+<li><a href="https://www.investopedia.com/terms/f/forwardrate.asp">https://www.investopedia.com/terms/f/forwardrate.asp</a></li>
+<li><a href="https://www.chicagofed.org/research/dual-mandate/dual-mandate">https://www.chicagofed.org/research/dual-mandate/dual-mandate</a></li>
+</ul>
+<p>Yield Curve Shifts</p>
+<ul>
+<li><a href="https://realinvestmentadvice.com/resources/blog/yield-curve-shifts-offer-signals-for-stockholders/">https://realinvestmentadvice.com/resources/blog/yield-curve-shifts-offer-signals-for-stockholders/</a></li>
+</ul>
+<p>Components Of Yield</p>
+<ul>
+<li><a href="https://www.frbsf.org/research-and-insights/publications/economic-letter/2007/07/term-premium/">https://www.frbsf.org/research-and-insights/publications/economic-letter/2007/07/term-premium/</a></li>
+<li><a href="https://youtu.be/jii8pg2DUa0?si=WSHJmHg21ej7Pedu">https://youtu.be/jii8pg2DUa0?si=WSHJmHg21ej7Pedu</a></li>
+<li><a href="https://fred.stlouisfed.org/series/T10Y3M">https://fred.stlouisfed.org/series/T10Y3M</a></li>
+<li><a href="https://horizon65.com/en/faq/inflation/what-is-an-inflation-premium/">https://horizon65.com/en/faq/inflation/what-is-an-inflation-premium/</a></li>
+<li><a href="https://www.moonfare.com/glossary/liquidity-premium">https://www.moonfare.com/glossary/liquidity-premium</a></li>
+<li><a href="https://www.investopedia.com/terms/d/defaultrisk.asp">https://www.investopedia.com/terms/d/defaultrisk.asp</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ejc1PgbL3lQ">https://www.youtube.com/watch?v=Ejc1PgbL3lQ</a></li>
+<li><a href="https://www.investopedia.com/terms/d/deleverage.asp">https://www.investopedia.com/terms/d/deleverage.asp</a></li>
+</ul>
+<p>Par Yield Curve</p>
+<ul>
+<li><a href="http://investopedia.com/terms/p/par-yield-curve.asp">http://investopedia.com/terms/p/par-yield-curve.asp</a></li>
+<li><a href="https://quant.stackexchange.com/questions/59838/why-does-the-coupon-effect-mean-that-higher-yields-do-not-necessarily-mean-that">https://quant.stackexchange.com/questions/59838/why-does-the-coupon-effect-mean-that-higher-yields-do-not-necessarily-mean-that</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&#x26;field_tdr_date_value_month=202211%C2%A0">https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&#x26;field_tdr_date_value_month=202211%C2%A0</a></li>
+<li><a href="https://www.schwab.com/learn/story/what-is-treasury-yield-curve">https://www.schwab.com/learn/story/what-is-treasury-yield-curve</a></li>
+<li><a href="https://newyorkclass.org/shape-u-s-treasury-yield-curve/">https://newyorkclass.org/shape-u-s-treasury-yield-curve/</a></li>
+<li><a href="https://fred.stlouisfed.org/series/T10Y2Y">https://fred.stlouisfed.org/series/T10Y2Y</a></li>
+</ul>
+<style>
+img:hover {
+  cursor: zoom-in;
+}
+
+div.hero-image img {
+  cursor: auto;
+}
+
+/* min-width must be greater than width of largest image plus ample padding room */
+@media (min-width: 720px) {
+  img[src^="/ust-explained/formulas"] {
+    max-width: 500px;
+  }
+}
+
+/* Center videos and images. */
+p:has(> video), p:has(> img), p:has(> a) {
+  text-align: center;
+}
+
+p:has(> .no-center) {
+  text-align: left;
+}
+
+/* Fix spacing before and after unordered lists, and for nested unordered lists. */
+ul {
+  margin-block-start: -1.5em;
+  margin-block-end: 2em;
+}
+ul ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Fix spacing when list is not followed by another paragraph. */
+li p {
+  margin: 0 !important;
+}
+</style>  </div> </article> </main> <footer data-astro-cid-sz7xmlte>
+I am not a professional in any of the topics I cover. Do your own research. I am not liable for any decisions you may
+  make (financial, medical, etc). Blog template by @astrodotbuild.
+<!-- <div class='social-links'>
+    <a href='https://m.webtoo.ls/@astro' target='_blank'>
+      <span class='sr-only'>Follow Astro on Mastodon</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/mastodon'
+        ><path
+          fill='currentColor'
+          d='M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z'
+        ></path></svg
+      >
+    </a>
+    <a href='https://twitter.com/astrodotbuild' target='_blank'>
+      <span class='sr-only'>Follow Astro on Twitter</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/twitter'
+        ><path
+          fill='currentColor'
+          d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z'
+        ></path></svg
+      >
+    </a>
+    <a href='https://github.com/withastro/astro' target='_blank'>
+      <span class='sr-only'>Go to Astro's GitHub repo</span>
+      <svg viewBox='0 0 16 16' aria-hidden='true' width='32' height='32' astro-icon='social/github'
+        ><path
+          fill='currentColor'
+          d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+        ></path></svg
+      >
+    </a>
+  </div> --> </footer>  </body></html>
